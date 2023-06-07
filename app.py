@@ -1,9 +1,12 @@
 # Import the required libraries
 from flask import Flask, render_template, request, redirect, url_for
 from joblib import load
+import pickle
 
 # Load the pipeline object
-pipeline = load("fake_news_classification.joblib")
+# pipeline = load("fake_news_classification.joblib")
+with open('fake_news_classification.pkl', 'rb') as f:
+    pipeline = pickle.load(f)
 
 # Function to get the result for a particular text query
 
