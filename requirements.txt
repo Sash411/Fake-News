@@ -9,4 +9,5 @@ nltk
 bs4
 seaborn
 gunicorn
+python3-scipy
 scipy
